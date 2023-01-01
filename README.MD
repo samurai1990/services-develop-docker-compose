@@ -5,10 +5,10 @@
 
 ### user manual 
 - for run service :
-    `make run`
+    `make run-service`
 
 - for down service 
-    `make down`
+    `make down-service`
 
 Note: after run service redis up over 6379 port in host ip
 
