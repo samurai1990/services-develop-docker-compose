@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  brocker:
+    image: redis:6-bullseye
+    container_name: redis_broker
+    command: redis-server --requirepass ${REDIS_PASSWORD}
+    ports:
+      - '6379:6379'
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD","redis-cli","ping"]
