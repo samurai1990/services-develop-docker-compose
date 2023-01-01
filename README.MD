@@ -11,3 +11,8 @@
     `make down`
 
 Note: after run service redis up over 6379 port in host ip
+
+
+##### dependency:
+- install docker
+- install docker compose
