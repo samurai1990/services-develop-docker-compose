@@ -1,6 +1,11 @@
-#### SET ENVIRONMENT VARAIBALE IN .env FILE
+#### SET ENVIRONMENT VARAIBALE IN .env FILE and source that
 
-`REDIS_PASSWORD=mypassword`
+```
+export REDIS_PASSWORD=mypassword
+export POSTGRES_DEVELOP_DB_USERNAME=myuser
+export POSTGRES_DEVELOP_DB_PASSWORD=mypassword
+export POSTGRES_DEVELOP_DB_NAME=test_db
+```
 
 
 ### user manual 
