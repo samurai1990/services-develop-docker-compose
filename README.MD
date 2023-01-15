@@ -5,6 +5,7 @@ export REDIS_PASSWORD=mypassword
 export POSTGRES_DEVELOP_DB_USERNAME=myuser
 export POSTGRES_DEVELOP_DB_PASSWORD=mypassword
 export POSTGRES_DEVELOP_DB_NAME=test_db
+export MONGO_DEVELOP_DB_PASSWORD=mypassword
 ```
 
 
