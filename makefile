@@ -10,5 +10,7 @@ run-brocker:
 	@docker-compose -f service.yml up -d  brocker
 run-db:
 	@docker-compose -f service.yml up -d  db
+run-mysql:
+	@docker-compose -f service.yml up -d  mysql
 down-service: ## down restore env
 	@docker-compose -f service.yml down
