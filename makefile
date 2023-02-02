@@ -4,7 +4,7 @@ clean-pyc : ## remove coverage artifacts
 	find . -name '*~' -exec rm -f {} +
 run-service:
 	@docker-compose -f service.yml up -d
-run-momgo:
+run-mongo:
 	@docker-compose -f service.yml up -d  mongo
 run-redis:
 	@docker-compose -f service.yml up -d  redis
