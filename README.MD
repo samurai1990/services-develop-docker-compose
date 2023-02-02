@@ -1,3 +1,4 @@
+# Run Service rabbbitmq , redis , mysql , mongo , postgres docker compose for developer
 #### SET ENVIRONMENT VARAIBALE IN .env FILE and source that
 
 ```
@@ -18,7 +19,7 @@ export RABBITMQ_DEVELOP_DEFAULT_PASS=password
     `make run-service`
 
 - run momgo db 
-    `make run-momgo`
+    `make run-mongo`
 
 - run redis cache 
     `make run-redis`
