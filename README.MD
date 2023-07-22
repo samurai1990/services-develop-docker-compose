@@ -1,18 +1,4 @@
-# Run Service rabbbitmq , redis , mysql , mongo , postgres docker compose for developer
-#### SET ENVIRONMENT VARAIBALE IN .env FILE and source that
-
-```
-export REDIS_PASSWORD=mypassword
-export POSTGRES_DEVELOP_DB_USERNAME=myuser
-export POSTGRES_DEVELOP_DB_PASSWORD=mypassword
-export POSTGRES_DEVELOP_DB_NAME=test_db
-export MONGO_DEVELOP_DB_PASSWORD=mypassword
-export MYSQL_DEVELOP_DATABASE=db_test
-export MYSQL_DEVELOP_ROOT_PASSWORD=root
-export RABBITMQ_DEVELOP_DEFAULT_USER=user
-export RABBITMQ_DEVELOP_DEFAULT_PASS=password
-```
-
+# Run Service rabbbitmq , redis , mysql , mongo , postgres , minio docker compose for developer
 
 ### user manual 
 - run all service :
@@ -31,7 +17,11 @@ export RABBITMQ_DEVELOP_DEFAULT_PASS=password
     `run-mysql`
 
 - run rabbitmq broker 
-    `make run-amqp`
+    1.`make build-qmqp`
+    2.`make run-amqp`
+
+- run minio
+    `make run-minio`
 
 #### down service 
     `make down-service`
