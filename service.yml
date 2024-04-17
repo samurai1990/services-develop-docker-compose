@@ -86,5 +86,32 @@ services:
       - '9000:9000'
       - '9001:9001'
 
+  elasticsearch:
+      image: elasticsearch:7.17.20
+      container_name: elasticsearch
+      restart: always
+      environment:
+        - discovery.type="single-node"
+        - cluster.name="cluster-1"
+        - node.name="node-1"
+        - xpack.security.enabled=false
+        - discovery.type=single-node
+      volumes:
+        - elasticsearch_storage:/usr/share/elasticsearch/data
+      ports:
+        - 9200:9200
+        
+  kibana:
+    container_name: kibana
+    image: kibana:7.17.20
+    restart: always
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+
 volumes:
   minio_storage: {}
+  elasticsearch_storage: {}

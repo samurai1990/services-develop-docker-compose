@@ -19,5 +19,7 @@ build-qmqp: ## build dependent images rabbitmq
 	@docker build -t rabbitmq_broker:stable ./rabbitmq
 run-amqp:
 	@docker compose -f service.yml up -d  rabbitmq
+run-kibana:
+	@docker compose -f service.yml up -d  kibana
 down-service: ## down restore env
 	@docker compose -f service.yml down
